@@ -1,12 +1,53 @@
 <!DOCTYPE html> 
 
 <head> 
+  <style> 
   body{background: grey;}
+    h1{color: blue;}
+    
+   #loading {
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     position: fixed;
+     display: block;
+     background-color: black;
+     opacity: 0.7;
+     z-index: 99;
+     text-align: center;
+    }
+    
+    #loading-image {
+      position: absolute;
+      top: 20%;
+      left: 30%;
+      z-index: 100;
+    }
+    
+  </style>
+  
 </head> 
 
 <body>
-  <iframe src="https://giphy.com/embed/xTkcEQACH24SMPxIQg" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/hand-bored-waiting-xTkcEQACH24SMPxIQg">via GIPHY</a></p>
-<h1> AJ Tomas </h1> 
+  
+  <div id = "loading">
+  <iframe id = "loading-image" src="https://giphy.com/embed/xTkcEQACH24SMPxIQg" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/hand-bored-waiting-xTkcEQACH24SMPxIQg">via GIPHY</a></p>
+  </div>
+  
+  <script> 
+    $(window).load(function() {
+      setTimeout(function() {
+        
+        $('#loading').hide(); 
+        
+      }, 2000 );
+      
+    });
+    
+  </script>
+  
+ <h1> AJ Tomas </h1> 
 
 <p> Student @ The University of Chicago </p>
 <p> Researching digital health @ Dipper Partners </p>
